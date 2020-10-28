@@ -244,9 +244,9 @@ function love.update(dt)
     -- player 2 (AI controlled)
     -- moves to try to hit ball at center of paddle
     if ball.y + ball.height / 2 < player2.y + player2.height / 2 then
-        player2.dy = -PADDLE_SPEED
+        player2.dy = -PADDLE_SPEED * 5 / 8
     elseif ball.y + ball.height / 2 > player2.y + player2.height / 2 then
-        player2.dy = PADDLE_SPEED
+        player2.dy = PADDLE_SPEED * 5 / 8
     else
         player2.dy = 0
     end
